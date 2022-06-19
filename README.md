@@ -16,13 +16,15 @@
 
 # Step 4  Use Extension UIViewController tự viết
 
-``extension UIViewController{
+```
+extension UIViewController{
             func directionToViewController(nameStoryboard:String,withIdentifier:String){
                 let storyboard = UIStoryboard(name: nameStoryboard, bundle: nil)
                 let gotoNextStoryboard = storyboard.instantiateViewController(withIdentifier: withIdentifier) as! UIViewController
                 self.navigationController?.pushViewController(gotoNextStoryboard, animated: true)
             }
-}``
+}
+```
 
 <img width="1680" alt="image" src="https://user-images.githubusercontent.com/107794765/174477975-26d9cea1-4b91-4c48-98a3-804205089ae8.png">
 
@@ -35,7 +37,8 @@
 
 
 
-``class AnotherVC:UIViewController{
+```
+class AnotherVC:UIViewController{
     @IBAction func gotoMainVC(_ sender: UIButton) {
         self.directionToViewController(nameStoryboard: "MainVC", withIdentifier: "MainVC")
     }
@@ -43,6 +46,7 @@
         super.viewDidLoad()
      
     }
-}``
+}
+```
 
 <img width="1680" alt="Screenshot 2022-06-19 at 18 08 03" src="https://user-images.githubusercontent.com/107794765/174477953-2c710c35-ddc3-44c2-93e5-c7da67beaf9f.png">
