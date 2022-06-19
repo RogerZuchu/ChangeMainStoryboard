@@ -17,6 +17,7 @@ extension UIViewController{
         self.navigationController?.pushViewController(gotoNextStoryboard, animated: true)
     }
 }
+<img width="1680" alt="image" src="https://user-images.githubusercontent.com/107794765/174477975-26d9cea1-4b91-4c48-98a3-804205089ae8.png">
 
 
 # Step 5 Add withIdentifier trong extension ở Storyboard ID trong Storyboard mà mình muốn chuyển tới
@@ -24,4 +25,17 @@ extension UIViewController{
 
 
 # Step 6 Tạo UIViewController để viết code chuyển navController
-<img width="1680" alt="Screenshot 2022-06-19 at 18 01 34" src="https://user-images.githubusercontent.com/107794765/174477897-1857ee6b-d7bd-46ed-8763-5d812eb4aea8.png">
+
+
+
+class AnotherVC:UIViewController{
+    @IBAction func gotoMainVC(_ sender: UIButton) {
+        self.directionToViewController(nameStoryboard: "MainVC", withIdentifier: "MainVC")
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+     
+    }
+}
+
+<img width="1680" alt="Screenshot 2022-06-19 at 18 08 03" src="https://user-images.githubusercontent.com/107794765/174477953-2c710c35-ddc3-44c2-93e5-c7da67beaf9f.png">
