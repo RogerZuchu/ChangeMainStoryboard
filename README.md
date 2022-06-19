@@ -15,13 +15,14 @@
 
 
 # Step 4  Use Extension UIViewController tự viết
-
+{
 extension UIViewController{
     func directionToViewController(nameStoryboard:String,withIdentifier:String){
         let storyboard = UIStoryboard(name: nameStoryboard, bundle: nil)
         let gotoNextStoryboard = storyboard.instantiateViewController(withIdentifier: withIdentifier) as! UIViewController
         self.navigationController?.pushViewController(gotoNextStoryboard, animated: true)
     }
+}
 }
 <img width="1680" alt="image" src="https://user-images.githubusercontent.com/107794765/174477975-26d9cea1-4b91-4c48-98a3-804205089ae8.png">
 
